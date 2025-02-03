@@ -1,4 +1,4 @@
-# Financial Score API
+# Altman Z-Score API - Financial Risk Assessment
 
 ## Project Overview
 This project is the first step in developing a comprehensive financial analysis tool for businesses. It provides an API to calculate the **Altman Z-Score**, a financial metric used to assess a company's risk of bankruptcy. The API is built using **FastAPI**, a high-performance web framework for Python.
@@ -64,5 +64,29 @@ This project is the foundation for a broader financial analytics platform. Futur
 - Integration with databases for persistent data storage.
 - Visualization dashboards.
 
+## Docker Setup
+A **Dockerfile** is included for containerization. To build and run the API using Docker:
+
+```bash
+# Build the Docker image
+docker build -t altman-z-score-api .
+
+# Run the container
+docker run -p 8000:8000 altman-z-score-api
+```
+
+## CI/CD Pipeline
+A **GitHub Actions** workflow is provided for automated testing and deployment. It is located in `.github/workflows/ci.yml`.
+
+### Steps:
+1. On push to `main` or a pull request, tests and linting run automatically.
+2. If successful, the API is deployed to a configured cloud service.
+
 ## Contributing
 Feel free to fork this repository, submit issues, or contribute with pull requests!
+
+## License
+This project is licensed under the **MIT License**.
+
+## Contact
+For questions or collaboration, reach out via GitHub or email at **your-email@example.com**.
